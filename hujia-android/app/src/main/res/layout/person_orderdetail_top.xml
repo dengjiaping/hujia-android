@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_color"
+              android:orientation="vertical">
+
+	<include layout="@layout/person_order_item_title"/>
+
+	<View style="@style/person_split_margin_top"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<ImageView
+			android:id="@+id/order_detail_address_img"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:src="@drawable/address_icon_img"/>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="15dp"
+			android:layout_toRightOf="@+id/order_detail_address_img"
+			android:paddingBottom="15dp"
+			android:paddingTop="15dp">
+
+			<TextView
+				android:id="@+id/order_detail_username"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="收货人：孙元欣"
+				android:textColor="@color/primary_color"
+				android:textSize="13sp"/>
+
+			<TextView
+				android:id="@+id/order_detail_phone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="40dp"
+				android:layout_toRightOf="@+id/order_detail_username"
+				android:gravity="center"
+				android:text="12345678969"
+				android:textColor="@color/primary_color"
+				android:textSize="13sp"/>
+
+			<TextView
+				android:id="@+id/order_detail_address"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/order_detail_username"
+				android:layout_marginTop="10dp"
+				android:text="收货地址：北京市朝阳区东三环北路中青大厦302"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="13sp"/>
+		</RelativeLayout>
+	</RelativeLayout>
+
+	<View style="@style/person_split_match"/>
+</LinearLayout>

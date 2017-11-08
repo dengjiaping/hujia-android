@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/integral_view_pager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/appBarLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fitsSystemWindows="true"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="@drawable/gradient_bg"
+			android:orientation="vertical"
+			app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textColor="@color/white"
+				android:text="7480"
+				android:layout_marginTop="34dp"
+				android:textSize="50sp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:textColor="@color/white"
+				android:text="当前积分"/>
+
+			<TextView
+				android:id="@+id/integral_exchange_now"
+				android:layout_width="160dp"
+				android:layout_height="40dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_marginTop="38dp"
+				android:layout_marginBottom="60dp"
+				android:background="@drawable/ellipse_white"
+				android:text="立即兑换"/>
+		</LinearLayout>
+
+		<RadioGroup
+			android:id="@+id/integral_radiogroup"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@color/white"
+			android:gravity="center"
+			android:orientation="horizontal">
+
+			<RadioButton
+				android:id="@+id/integral_all"
+				style="@style/orderRadioButtonStyle"
+				android:checked="true"
+				android:text="@string/person_order_all"/>
+
+			<RadioButton
+				android:id="@+id/integral_income"
+				style="@style/orderRadioButtonStyle"
+				android:text="收入"/>
+
+			<RadioButton
+				android:id="@+id/integral_cost"
+				style="@style/orderRadioButtonStyle"
+				android:text="支出"/>
+		</RadioGroup>
+
+	</android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+

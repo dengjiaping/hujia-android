@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:paddingBottom="15dp"
+			android:paddingTop="15dp">
+
+			<include layout="@layout/person_order_cloth_detail"/>
+		</LinearLayout>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingBottom="15dp"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp"
+			android:paddingTop="15dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="服务类型"
+				android:textColor="@color/primary_color"
+				android:textSize="13sp"/>
+
+			<TextView
+				android:layout_width="75dp"
+				android:layout_height="28dp"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/person_charge_useable"
+				android:button="@null"
+				android:gravity="center"
+				android:text="仅退款"
+				android:textColor="@color/primary_color_red"
+				android:textSize="13sp"
+				android:visibility="visible"/>
+
+			<RadioGroup
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal"
+				android:visibility="gone">
+
+				<RadioButton
+					android:id="@+id/service_apply_fix"
+					android:layout_width="75dp"
+					android:layout_height="28dp"
+					android:background="@drawable/person_order_service_type_bg"
+					android:button="@null"
+					android:gravity="center"
+					android:text="维修"
+					android:textColor="@drawable/person_order_category_textcolor"
+					android:textSize="13sp"
+					android:visibility="gone"/>
+
+				<RadioButton
+					android:id="@+id/service_apply_return_goods"
+					android:layout_width="75dp"
+					android:layout_height="28dp"
+					android:background="@drawable/person_order_service_type_bg"
+					android:button="@null"
+					android:gravity="center"
+					android:text="退货"
+					android:textColor="@drawable/person_order_category_textcolor"
+					android:textSize="13sp"/>
+
+				<RadioButton
+					android:id="@+id/service_apply_refund"
+					android:layout_width="75dp"
+					android:layout_height="28dp"
+					android:layout_marginLeft="10dp"
+					android:background="@drawable/person_order_service_type_bg"
+					android:button="@null"
+					android:gravity="center"
+					android:text="退款"
+					android:textColor="@drawable/person_order_category_textcolor"
+					android:textSize="13sp"/>
+			</RadioGroup>
+		</LinearLayout>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingBottom="10dp"
+			android:paddingEnd="12dp"
+			android:paddingStart="12dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="15dp"
+				android:layout_marginTop="15dp"
+				android:text="退货原因"
+				android:textColor="@color/primary_color"
+				android:textSize="13sp"/>
+
+			<TextView
+				android:id="@+id/refund_apply_reason"
+				android:layout_width="match_parent"
+				android:layout_height="28dp"
+				android:background="@drawable/confirm_receipt_input_bg"
+				android:drawableRight="@drawable/refund_choose_more"
+				android:gravity="center_vertical"
+				android:paddingEnd="10dp"
+				android:paddingStart="10dp"
+				android:text="请选择退款原因"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="14sp"/>
+		</LinearLayout>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingBottom="10dp"
+			android:paddingEnd="12dp"
+			android:paddingStart="12dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="15dp"
+				android:layout_marginTop="15dp"
+				android:text="退款金额"
+				android:textColor="@color/primary_color"
+				android:textSize="13sp"/>
+
+			<TextView
+				android:id="@+id/refund_apply_maxprice"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:lineSpacingExtra="3dp"
+				android:background="@drawable/confirm_receipt_input_bg"
+				android:enabled="false"
+				android:gravity="center_vertical"
+				android:paddingStart="10dp"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="14sp"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/refund_apply_commit"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_marginBottom="20dp"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:layout_marginTop="15dp"
+			android:background="@drawable/ic_button"
+			android:enabled="true"
+			android:gravity="center"
+			android:text="提交"
+			android:textColor="@color/white"/>
+
+	</LinearLayout>
+</ScrollView>

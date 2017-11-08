@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_color"
+              android:orientation="vertical">
+
+	<ListView
+		android:id="@+id/order_confirm_list"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="@color/common_bg_color"
+		android:divider="@color/common_bg_color"
+		android:dividerHeight="10dp"
+		android:scrollbars="none"/>
+
+	<View style="@style/person_split_match"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="49dp">
+
+		<TextView
+			android:id="@+id/order_confirm_commit"
+			android:layout_width="130dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentEnd="true"
+			android:background="@color/primary_color_red"
+			android:gravity="center"
+			android:text="@string/submit_order"
+			android:textColor="@color/white"
+			android:textSize="16sp"/>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginEnd="15dp"
+			android:layout_toStartOf="@+id/order_confirm_commit"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/confirm_all_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textColor="@color/primary_color"
+				android:textSize="16sp"/>
+
+			<TextView
+				android:id="@+id/confirm_coupon_minus"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="11sp"/>
+		</LinearLayout>
+
+	</RelativeLayout>
+</LinearLayout>

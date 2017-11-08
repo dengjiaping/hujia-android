@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_bg_color">
+
+	<LinearLayout
+		android:id="@+id/receipt_status_choose"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<View style="@style/person_split_margin_top"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:paddingStart="12dp"
+			android:paddingTop="15dp"
+			android:text="@string/receipt_is_need"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<RadioGroup
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="10dp"
+			android:background="@color/white"
+			android:orientation="horizontal"
+			android:paddingBottom="15dp"
+			android:paddingStart="12dp"
+			android:visibility="visible">
+
+			<RadioButton
+				android:id="@+id/receipt_status_no"
+				android:layout_width="wrap_content"
+				android:layout_height="28dp"
+				android:background="@drawable/person_order_service_type_bg"
+				android:button="@null"
+				android:checked="true"
+				android:gravity="center"
+				android:paddingEnd="13sp"
+				android:paddingStart="13sp"
+				android:text="@string/receipt_not_need"
+				android:textColor="@drawable/person_order_category_textcolor"
+				android:textSize="13sp"/>
+
+			<RadioButton
+				android:id="@+id/receipt_status_yes"
+				android:layout_width="wrap_content"
+				android:layout_height="28dp"
+				android:layout_marginLeft="10dp"
+				android:background="@drawable/person_order_service_type_bg"
+				android:button="@null"
+				android:gravity="center"
+				android:paddingEnd="13sp"
+				android:paddingStart="13sp"
+				android:text="@string/receipt_need"
+				android:textColor="@drawable/person_order_category_textcolor"
+				android:textSize="13sp"/>
+		</RadioGroup>
+
+		<View style="@style/person_split_match"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/receipt_layout_content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/receipt_status_choose"
+		android:orientation="vertical"
+		android:visibility="gone">
+
+		<View style="@style/person_split_margin_top"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@color/white"
+			android:gravity="center_vertical"
+			android:paddingStart="12dp"
+			android:text="发票类型：普通发票"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@color/white"
+			android:gravity="center_vertical"
+			android:paddingStart="12dp"
+			android:text="发票内容：明细"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingBottom="15dp"
+			android:paddingEnd="12dp"
+			android:paddingStart="12dp"
+			android:paddingTop="15dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="发票抬头"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+
+			<EditText
+				android:id="@+id/receipt_input"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/confirm_receipt_input_bg"
+				android:hint="@string/receipt_input_head"
+				android:paddingStart="10dp"
+				android:singleLine="true"
+				android:imeOptions="actionDone"
+				android:textColorHint="@color/person_check_order_textcolor"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/receipt_ok"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="20dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginTop="15dp"
+		android:background="@color/primary_color_red"
+		android:gravity="center"
+		android:text="@string/button_ok"
+		android:textColor="@color/white"/>
+</RelativeLayout>

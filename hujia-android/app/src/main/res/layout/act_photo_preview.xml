@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/sdv_photo_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		fresco:actualImageScaleType="centerCrop"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/custom_camera_bg"/>
+
+	<ImageView
+		android:id="@+id/iv_photo_close"
+		android:layout_width="wrap_content"
+		android:layout_height="48dp"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		android:src="@drawable/camera_close_icon"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="116dp"
+		android:layout_gravity="bottom"
+		android:gravity="center">
+
+		<ImageView
+			android:id="@+id/iv_photo_cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="40dp"
+			android:src="@drawable/camera_cancel"/>
+
+		<ImageView
+			android:id="@+id/iv_photo_confirm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="40dp"
+			android:src="@drawable/camera_confirm"/>
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_map_pop_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/store_map_pop_marker"
+                android:padding="10dp">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/sdv_map_pop_img"
+		android:layout_width="50dp"
+		android:layout_height="50dp"/>
+
+	<TextView
+		android:id="@+id/tv_map_pop_title"
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/sdv_map_pop_img"
+		android:text="万达广场"
+		android:textSize="18sp"/>
+
+	<TextView
+		android:id="@+id/tv_map_pop_address"
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tv_map_pop_title"
+		android:layout_toRightOf="@id/sdv_map_pop_img"
+		android:ellipsize="end"
+		android:maxLines="2"
+		android:text="地址：北京市西城区大牧场胡同33号"/>
+</RelativeLayout>

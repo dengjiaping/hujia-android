@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:fresco="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="400dp"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:orientation="horizontal">
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/product_fix_img"
+			android:layout_width="87dp"
+			android:layout_height="102dp"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="25dp"
+			android:background="@drawable/person_order_cloth_bg"
+			fresco:actualImageScaleType="fitCenter"
+			fresco:failureImage="@drawable/default_product_bg"
+			fresco:placeholderImage="@drawable/default_product_bg"/>
+
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="25dp"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/product_fix_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:lineSpacingExtra="3dp"
+				android:maxLines="2"
+				android:textColor="@color/primary_color"
+				android:textSize="16sp"/>
+
+			<TextView
+				android:id="@+id/product_fix_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/product_fix_name"
+				android:layout_marginTop="20dp"
+				android:textColor="@color/primary_color_red"
+				android:textSize="16sp"/>
+
+			<TextView
+				android:id="@+id/product_fix_old_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignBottom="@+id/product_fix_price"
+				android:layout_below="@+id/product_fix_name"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="20dp"
+				android:layout_toRightOf="@+id/product_fix_price"
+				android:gravity="bottom"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="11sp"/>
+
+			<TextView
+				android:id="@+id/product_fix_num"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/product_fix_price"
+				android:layout_marginTop="8dp"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="11sp"/>
+		</RelativeLayout>
+
+		<ImageView
+			android:id="@+id/product_fix_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="13dp"
+			android:paddingRight="15dp"
+			android:paddingTop="20dp"
+			android:src="@drawable/product_fix_close"/>
+	</LinearLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:background="@color/white"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/product_fix_attr1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:text="@string/person_order_size_name"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+
+			<com.ihujia.hujia.person.flowlayout.FlowTagLayout
+				android:id="@+id/product_fix_size"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"/>
+
+			<TextView
+				android:id="@+id/product_fix_attr2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="25dp"
+				android:text="@string/person_order_color_name"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+
+			<com.ihujia.hujia.person.flowlayout.FlowTagLayout
+				android:id="@+id/product_fix_color"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10dp"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="25dp"
+				android:text="@string/count"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+
+			<com.ihujia.hujia.widget.AddMinuLayout
+				android:id="@+id/product_fix_num_change"
+				android:layout_width="160dp"
+				android:layout_height="30dp"
+				android:layout_marginBottom="25dp"
+				android:layout_marginLeft="15dp"/>
+
+		</LinearLayout>
+	</ScrollView>
+
+	<TextView
+		android:id="@+id/shopcar_fix_ok"
+		android:layout_width="match_parent"
+		android:layout_height="49dp"
+		android:background="@color/primary_color_red"
+		android:gravity="center"
+		android:text="@string/button_ok"
+		android:textColor="@color/white"
+		android:textSize="14sp"/>
+</LinearLayout>
+
+

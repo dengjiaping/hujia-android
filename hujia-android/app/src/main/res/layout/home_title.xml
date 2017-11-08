@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/home_layout"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:background="@drawable/home_title_bg"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingStart="0dp"
+              android:paddingEnd="15dp">
+
+	<ImageView
+		android:id="@+id/home_scan"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		android:src="@drawable/home_scan_white"/>
+
+	<RelativeLayout
+		android:id="@+id/home_search"
+		android:layout_width="match_parent"
+		android:layout_height="28dp"
+		android:layout_marginStart="6dp"
+		android:background="@drawable/home_search_white_bg"
+		android:gravity="center">
+
+		<ImageView
+			android:id="@+id/home_search_img"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:src="@drawable/home_search_white_icon"/>
+
+		<TextView
+			android:id="@+id/home_search_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toEndOf="@id/home_search_img"
+			android:paddingStart="6dp"
+			android:paddingEnd="0dp"
+			android:text="搜索"
+			android:textColor="@color/white"
+			android:textSize="12sp"/>
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp">
+
+		<ImageView
+			android:id="@+id/collection_back"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:src="@drawable/ic_back"/>
+
+		<RadioGroup
+			android:id="@+id/collection_group"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_centerInParent="true"
+			android:orientation="horizontal">
+
+			<RadioButton
+				android:id="@+id/collection_product"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:background="@drawable/order_category_selector"
+				android:button="@null"
+				android:checked="true"
+				android:text="商家"
+				android:textColor="@drawable/person_order_category_textcolor"
+				android:textSize="15sp"/>
+
+			<RadioButton
+				android:id="@+id/collection_store"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginStart="36dp"
+				android:background="@drawable/order_category_selector"
+				android:button="@null"
+				android:checked="false"
+				android:text="店铺"
+				android:textColor="@drawable/person_order_category_textcolor"
+				android:textSize="15sp"/>
+		</RadioGroup>
+
+		<TextView
+			android:id="@+id/collection_edit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginEnd="15dp"
+			android:layout_marginStart="15dp"
+			android:text="编辑"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_match"/>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/collection_viewpager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>

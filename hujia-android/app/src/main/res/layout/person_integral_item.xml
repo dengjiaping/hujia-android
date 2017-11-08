@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/integral_item_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="15dp"
+		android:text="-700"
+		android:textColor="@color/primary_color"
+		android:textSize="18sp"/>
+
+	<TextView
+		android:id="@+id/integral_item_type"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/integral_item_value"
+		android:layout_marginTop="10dp"
+		android:paddingLeft="15dp"
+		android:text="积分兑换"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="12sp"/>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:orientation="vertical"
+		android:paddingRight="15dp">
+
+		<TextView
+			android:id="@+id/integral_item_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="2016-12-20 12:20:30"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/integral_item_timeinfo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="兑换积分时间"
+			android:textColor="@color/person_check_order_textcolor"
+			android:textSize="12sp"/>
+	</LinearLayout>
+
+	<View style="@style/person_split_match"/>
+
+</RelativeLayout>

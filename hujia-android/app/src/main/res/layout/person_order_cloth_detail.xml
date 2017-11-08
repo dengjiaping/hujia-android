@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:fresco="http://schemas.android.com/apk/res-auto"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:paddingEnd="12dp"
+	android:paddingStart="0dp">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/order_item_img"
+		android:layout_width="108dp"
+		android:layout_height="108dp"
+		android:background="@drawable/person_order_cloth_bg"
+		android:padding="1px"
+		fresco:actualImageScaleType="fitCenter"
+		fresco:failureImage="@drawable/default_product_bg"
+		fresco:placeholderImage="@drawable/default_product_bg"/>
+
+	<LinearLayout
+		android:id="@+id/order_item_clothinfo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="12dp"
+		android:layout_toRightOf="@+id/order_item_img"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/order_item_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:lineSpacingExtra="5dp"
+			android:maxLines="2"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_item_color"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:textColor="@color/person_check_order_textcolor"
+			android:textSize="12sp"/>
+
+		<TextView
+			android:id="@+id/order_item_size"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:textColor="@color/person_check_order_textcolor"
+			android:textSize="12sp"/>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/order_item_price"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_below="@+id/order_item_clothinfo"
+		android:layout_marginLeft="12dp"
+		android:layout_toRightOf="@+id/order_item_img"
+		android:gravity="bottom"
+		android:paddingTop="6dp"
+		android:textColor="@color/primary_color"
+		android:textSize="15sp"/>
+
+	<TextView
+		android:id="@+id/order_item_num"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="33dp"
+		android:layout_toRightOf="@+id/order_item_price"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="12sp"/>
+
+	<TextView
+		android:id="@+id/order_item_customer_service"
+		android:layout_width="wrap_content"
+		android:layout_height="28dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="12dp"
+		android:background="@drawable/person_order_button_bg"
+		android:gravity="center"
+		android:paddingEnd="13dp"
+		android:paddingStart="13dp"
+		android:textColor="@color/primary_color"
+		android:textSize="13sp"
+		android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginBottom="35dp"
+		android:layout_marginLeft="17dp"
+		android:layout_marginRight="17dp"
+		android:layout_marginTop="35dp"
+		android:background="@drawable/person_vipcard_bg"
+		android:orientation="vertical">
+
+		<ImageView
+			android:id="@+id/vipcard_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:src="@drawable/default_avatar_bg"/>
+
+		<TextView
+			android:id="@+id/vipcard_banlance"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="140dp"
+			android:gravity="center"
+			android:text="288888888.00"
+			android:textColor="@color/primary_color"
+			android:textSize="50sp"/>
+
+		<TextView
+			android:id="@+id/vipcard_banlance_info"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/vipcard_banlance"
+			android:layout_marginTop="25dp"
+			android:gravity="center"
+			android:text="当前余额（元）"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<View
+			android:id="@+id/vipcard_line1"
+			style="@style/person_split_match"
+			android:layout_marginTop="36dp"
+			android:layout_below="@+id/vipcard_banlance_info"/>
+
+		<TextView
+			android:id="@+id/vipcard_charge_record"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp"
+			android:textSize="14sp"
+			android:textColor="@color/primary_color"
+			android:layout_below="@id/vipcard_line1"
+			android:drawableRight="@drawable/hujia_more"
+			android:text="充值记录"/>
+
+		<View
+			android:id="@+id/vipcard_line2"
+			style="@style/person_split_match"
+			android:layout_below="@+id/vipcard_charge_record"/>
+
+		<TextView
+			android:id="@+id/vipcard_consume_record"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp"
+			android:textSize="14sp"
+			android:textColor="@color/primary_color"
+			android:layout_below="@+id/vipcard_line2"
+			android:drawableRight="@drawable/hujia_more"
+			android:text="消费记录"/>
+
+		<View
+			style="@style/person_split_match"
+			android:layout_below="@+id/vipcard_consume_record"/>
+
+		<TextView
+			android:id="@+id/vipcard_charge_now"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:layout_alignParentBottom="true"
+			android:layout_marginTop="70dp"
+			android:layout_marginBottom="27dp"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:background="@drawable/person_vipcard_recharge_bg"
+			android:gravity="center"
+			android:text="立即充值"
+			android:textColor="@color/white"
+			android:textSize="16sp"/>
+	</RelativeLayout>
+</RelativeLayout>

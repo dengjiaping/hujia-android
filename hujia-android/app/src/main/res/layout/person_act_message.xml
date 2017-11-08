@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/rl_system_message_layout"
+		android:layout_width="match_parent"
+		android:layout_height="78dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingEnd="12dp"
+		android:paddingStart="12dp">
+
+		<ImageView
+			android:id="@+id/iv_system_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/system_message_icon"/>
+
+		<TextView
+			android:id="@+id/tv_system_message_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/iv_system_logo"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:text="@string/message_system"
+			android:textColor="@color/primary_color"
+			android:textSize="16sp"/>
+
+		<TextView
+			android:id="@+id/tv_system_message_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_system_message_title"
+			android:layout_toEndOf="@id/iv_system_logo"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:paddingTop="10dp"
+			android:visibility="visible"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/tv_system_message_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:visibility="visible"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_margin_top"/>
+
+	<RelativeLayout
+		android:id="@+id/rl_logistics_message_layout"
+		android:layout_width="match_parent"
+		android:layout_height="78dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingEnd="12dp"
+		android:paddingStart="12dp">
+
+		<ImageView
+			android:id="@+id/iv_logistics_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/logistics_system_icon"/>
+
+		<TextView
+			android:id="@+id/tv_logistics_message_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/iv_logistics_logo"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:text="@string/message_logistics"
+			android:textColor="@color/primary_color"
+			android:textSize="16sp"/>
+
+		<TextView
+			android:id="@+id/tv_logistics_message_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_logistics_message_title"
+			android:layout_toEndOf="@id/iv_logistics_logo"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:paddingTop="10dp"
+			android:visibility="gone"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/tv_logistics_message_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:visibility="gone"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_margin_top"/>
+
+	<RelativeLayout
+		android:id="@+id/rl_assets_message_layout"
+		android:layout_width="match_parent"
+		android:layout_height="78dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingEnd="12dp"
+		android:paddingStart="12dp">
+
+		<ImageView
+			android:id="@+id/iv_assets_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/assets_system_icon"/>
+
+		<TextView
+			android:id="@+id/tv_assets_message_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/iv_assets_logo"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:text="@string/message_assets"
+			android:textColor="@color/primary_color"
+			android:textSize="16sp"/>
+
+		<TextView
+			android:id="@+id/tv_assets_message_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_assets_message_title"
+			android:layout_toEndOf="@id/iv_assets_logo"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:paddingEnd="0dp"
+			android:paddingStart="15dp"
+			android:paddingTop="10dp"
+			android:visibility="gone"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/tv_assets_message_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:visibility="gone"
+			android:textColor="@color/main_channel_textcolor"
+			android:textSize="14sp"/>
+	</RelativeLayout>
+</LinearLayout>

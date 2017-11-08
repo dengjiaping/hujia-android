@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/common_bg"
+              android:orientation="vertical"
+              android:paddingEnd="12dp"
+              android:paddingStart="12dp">
+
+	<TextView
+		android:id="@+id/tv_logistic_msg_date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:paddingBottom="10dp"
+		android:paddingTop="20dp"/>
+
+	<android.support.v7.widget.CardView
+		android:id="@+id/cv_logistic_msg_detail"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="@color/white"
+		app:cardCornerRadius="4dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="15dp"
+			android:paddingEnd="10dp"
+			android:paddingStart="10dp"
+			android:paddingTop="15dp">
+
+			<TextView
+				android:id="@+id/tv_logistic_msg_status"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingBottom="10dp"
+				android:textColor="@color/primary_color"
+				android:textSize="16sp"/>
+
+			<com.facebook.drawee.view.SimpleDraweeView
+				android:id="@+id/sdv_logistic_msg_img"
+				android:layout_width="60dp"
+				android:layout_height="60dp"
+				android:layout_below="@id/tv_logistic_msg_status"
+				fresco:actualImageScaleType="fitCenter"/>
+
+			<TextView
+				android:id="@+id/tv_logistic_msg_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tv_logistic_msg_status"
+				android:layout_toEndOf="@id/sdv_logistic_msg_img"
+				android:paddingEnd="0dp"
+				android:paddingStart="15dp"
+				android:textColor="@color/primary_color"
+				android:textSize="15sp"/>
+
+			<TextView
+				android:id="@+id/tv_logistic_msg_content"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tv_logistic_msg_title"
+				android:layout_toEndOf="@id/sdv_logistic_msg_img"
+				android:paddingEnd="0dp"
+				android:paddingStart="15dp"
+				android:paddingTop="10dp"
+				android:textColor="@color/main_channel_textcolor"
+				android:textSize="13sp"/>
+		</RelativeLayout>
+	</android.support.v7.widget.CardView>
+</LinearLayout>

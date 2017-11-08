@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/fl_activity_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/sdv_activity_img"
+		android:layout_width="match_parent"
+		android:layout_height="170dp"
+		fresco:actualImageScaleType="fitCenter"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:layout_gravity="bottom"
+		android:background="@drawable/translucent_gradient_bg">
+
+		<TextView
+			android:id="@+id/tv_activity_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:paddingBottom="13dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:textColor="@color/white"
+			android:textSize="15sp"/>
+	</FrameLayout>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/common_bg_color"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/person_setting_clean_cache"
+		style="@style/PersonItemCommon"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:text="@string/person_setting_clean_cache"/>
+
+	<View
+		style="@style/person_split_left_right"/>
+
+	<TextView
+		android:id="@+id/person_setting_feedback"
+		style="@style/PersonItemCommon"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginTop="1px"
+		android:text="@string/person_setting_feedback"/>
+
+	<View
+		style="@style/person_split_left_right"/>
+
+	<TextView
+		android:id="@+id/person_setting_check_update"
+		style="@style/PersonItemCommon"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginTop="1px"
+		android:text="@string/person_setting_check_update"/>
+
+	<TextView
+		android:id="@+id/person_setting_logout"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginTop="30dp"
+		android:gravity="center"
+		android:background="@drawable/ic_button"
+		android:visibility="gone"
+		android:text="@string/person_setting_loginout"
+		android:textColor="@color/white"/>
+</LinearLayout>

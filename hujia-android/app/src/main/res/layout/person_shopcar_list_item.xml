@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<View style="@style/person_split_match"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:id="@+id/shopcar_item_checked"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="12dp"
+			android:paddingRight="12dp"
+			android:button="@drawable/person_shopcar_select_all"/>
+
+		<FrameLayout
+			android:layout_width="0dp"
+			android:layout_height="141dp"
+			android:layout_weight="1"
+			android:paddingTop="15dp"
+			android:paddingBottom="10dp">
+
+			<include
+				android:id="@+id/shopcar_item_normal"
+				layout="@layout/person_order_cloth_detail"/>
+
+			<include
+				android:id="@+id/shopcar_item_edit"
+				layout="@layout/person_shopcar_edit"
+				android:visibility="gone"/>
+		</FrameLayout>
+
+		<FrameLayout
+			android:layout_width="49dp"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:id="@+id/shopcar_item_edit_operate"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/distance_spinner_right_bg"
+				android:orientation="vertical"
+				android:visibility="gone">
+
+				<TextView
+					android:id="@+id/shopcar_item_edit_finish"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="完成"
+					android:textColor="@color/primary_color"
+					android:textSize="12sp"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/person_shopcar_split_line"/>
+
+				<TextView
+					android:id="@+id/shopcar_item_edit_delete"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="删除"
+					android:textColor="@color/primary_color"
+					android:textSize="12sp"/>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/shopcar_item_normal_operate"
+				android:layout_width="49dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="12dp"
+				android:paddingTop="15dp"
+				android:text="编辑"
+				android:textColor="@color/primary_color"
+				android:textSize="12sp"/>
+		</FrameLayout>
+	</LinearLayout>
+</LinearLayout>

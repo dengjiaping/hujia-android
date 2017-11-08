@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="108dp"
+		android:background="@color/white">
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/sdv_other_store_detail_bg"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/common_spilt_line"
+			app:failureImage="@drawable/default_banner_bg"
+			app:overlayImage="@color/foreground_overlay"
+			app:placeholderImage="@drawable/default_banner_bg"
+			fresco:actualImageScaleType="fitCenter"/>
+
+		<ImageView
+			android:id="@+id/iv_other_store_detail_back"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:src="@drawable/ic_back_white"/>
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/sdv_other_store_detail_logo"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="6dp"
+			android:layout_marginStart="15dp"
+			app:failureImage="@drawable/default_product_bg"
+			app:placeholderImage="@drawable/default_product_bg"
+			fresco:actualImageScaleType="fitCenter"/>
+
+		<TextView
+			android:id="@+id/tv_other_store_stock"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="14dp"
+			android:layout_toEndOf="@id/sdv_other_store_detail_logo"
+			android:paddingEnd="0dp"
+			android:paddingStart="10dp"
+			android:paddingTop="5dp"
+			android:textColor="@color/white"
+			android:textSize="12sp"/>
+
+		<TextView
+			android:id="@+id/tv_other_store_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/tv_other_store_stock"
+			android:layout_toEndOf="@id/sdv_other_store_detail_logo"
+			android:paddingEnd="0dp"
+			android:paddingStart="10dp"
+			android:textColor="@color/white"
+			android:textSize="15sp"/>
+	</RelativeLayout>
+
+	<android.support.design.widget.TabLayout
+		android:id="@+id/tl_other_store_detail_tab"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		app:tabIndicatorColor="@color/primary_color_red"
+		app:tabSelectedTextColor="@color/primary_color_red"
+		app:tabTextAppearance="@style/TabLayoutTextStyle"
+		app:tabTextColor="@color/person_check_order_textcolor"/>
+
+	<View style="@style/person_split_match"/>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/vp_other_store_detail_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>

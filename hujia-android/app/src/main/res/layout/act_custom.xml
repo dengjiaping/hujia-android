@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+	<ProgressBar
+		android:id="@+id/custom_progress_horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="5dip"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:max="100"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<com.tencent.smtt.sdk.WebView
+			android:id="@+id/custom_webview"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+		<ImageView
+			android:id="@+id/left_button"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:paddingStart="15dp"
+			android:paddingEnd="15dp"
+			android:src="@drawable/ic_back"/>
+
+		<FrameLayout
+			android:id="@+id/right_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_gravity="end">
+
+			<ImageView
+				android:id="@+id/right_button"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:paddingStart="15dp"
+				android:paddingEnd="15dp"
+				android:src="@drawable/product_detail_shopcar"/>
+
+			<TextView
+				android:id="@+id/right_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:paddingLeft="3.5dp"
+				android:paddingRight="3.5dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginEnd="8dp"
+				android:textSize="10sp"
+				android:textColor="@color/white"
+				android:visibility="visible"
+				android:background="@drawable/shape_circle_red"/>
+		</FrameLayout>
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/gradient_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_store_renovation_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/tv_store_renovation_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_a" />
+
+        <ImageView
+            android:id="@+id/iv_store_renovation_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:src="@drawable/ic_share_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/gradient_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sdv_store_renovation_card"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rect_border_bg"
+                fresco:cardCornerRadius="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_store_renovation_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:failureImage="@drawable/default_brand_bg"
+                    fresco:placeholderImage="@drawable/default_brand_bg" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_store_renovation_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/sdv_store_renovation_card"
+                android:paddingLeft="15dp"
+                android:paddingTop="18dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_store_renovation_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_store_renovation_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_toRightOf="@id/sdv_store_renovation_card"
+                android:background="@color/store_renovation_type_red"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_store_renovation_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="15dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_store_renovation_num"
+                android:paddingTop="5dp"
+                android:text="@string/product_detail_sale_num1"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+
+</LinearLayout>

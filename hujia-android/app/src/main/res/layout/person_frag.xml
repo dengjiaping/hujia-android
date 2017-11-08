@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/common_bg_color"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/person_title_bg">
+
+			<ImageView
+				android:id="@+id/person_main_setting"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingBottom="15dp"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:paddingTop="14dp"
+				android:src="@drawable/person_setting"/>
+
+			<FrameLayout
+				android:id="@+id/person_main_message"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:paddingBottom="10dp"
+				android:paddingLeft="15dp"
+				android:paddingRight="5dp"
+				android:paddingTop="10dp">
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:paddingTop="4dp"
+					android:src="@drawable/person_news"/>
+
+				<TextView
+					android:id="@+id/person_message_dot"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="right"
+					android:background="@drawable/shape_circle_white"
+					android:paddingLeft="3.5dp"
+					android:paddingRight="3.5dp"
+					android:text="20"
+					android:textColor="@color/red"
+					android:textSize="10sp"
+					android:visibility="gone"/>
+			</FrameLayout>
+
+			<com.facebook.drawee.view.SimpleDraweeView
+				android:id="@+id/person_main_avatar"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="34dp"
+				fresco:actualImageScaleType="fitCenter"
+				fresco:failureImage="@drawable/default_avatar_bg"
+				fresco:placeholderImage="@drawable/default_avatar_bg"
+				fresco:roundAsCircle="true"/>
+
+			<TextView
+				android:id="@+id/person_main_phone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="114dp"
+				android:textColor="@color/white"
+				android:padding="15dp"
+				android:textSize="12sp"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/person_all_order"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@color/white"
+			android:gravity="center_vertical"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/person_order"
+				android:textColor="@color/primary_color"
+				android:textSize="16sp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:drawablePadding="5dp"
+				android:drawableRight="@drawable/hujia_more"
+				android:text="@string/person_all_order"
+				android:textColor="@color/person_check_order_textcolor"
+				android:textSize="12sp"/>
+		</RelativeLayout>
+
+		<View style="@style/person_split_match"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="horizontal">
+
+			<FrameLayout
+				android:id="@+id/person_order_paying_view"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<TextView
+					android:id="@+id/person_order_paying"
+					style="@style/orderItemStyle"
+					android:drawableTop="@drawable/person_order_paying"
+					android:text="@string/person_order_paying"/>
+
+				<include layout="@layout/person_order_red_dot"/>
+			</FrameLayout>
+
+			<FrameLayout
+				android:id="@+id/person_order_deliver_view"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<TextView
+					android:id="@+id/person_order_deliver"
+					style="@style/orderItemStyle"
+					android:drawableTop="@drawable/person_order_deliver"
+					android:text="@string/person_order_deliver"/>
+
+				<include layout="@layout/person_order_red_dot"/>
+			</FrameLayout>
+
+			<FrameLayout
+				android:id="@+id/person_order_geting_view"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<TextView
+					android:id="@+id/person_order_geting"
+					style="@style/orderItemStyle"
+					android:drawableTop="@drawable/person_order_getting"
+					android:text="@string/person_order_getting"/>
+
+				<include layout="@layout/person_order_red_dot"/>
+			</FrameLayout>
+
+			<FrameLayout
+				android:id="@+id/person_order_refund_view"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<TextView
+					android:id="@+id/person_order_refund"
+					style="@style/orderItemStyle"
+					android:drawableTop="@drawable/person_refund"
+					android:text="@string/person_refund_after_sale"/>
+
+				<include layout="@layout/person_order_red_dot"/>
+			</FrameLayout>
+		</LinearLayout>
+
+		<View style="@style/person_split_match"/>
+
+		<View style="@style/person_split_margin_top"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:paddingLeft="12dp"
+			android:paddingRight="12dp">
+
+			<RelativeLayout
+				android:id="@+id/person_collection"
+				android:layout_width="match_parent"
+				android:layout_height="44dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:drawableLeft="@drawable/person_collection"
+					android:drawablePadding="13dp"
+					android:gravity="center_vertical"
+					android:text="@string/person_my_favorite"
+					android:textColor="@color/primary_color"
+					android:textSize="16sp"/>
+
+				<TextView
+					android:id="@+id/person_collection_more"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:drawablePadding="10dp"
+					android:drawableRight="@drawable/hujia_more"
+					android:gravity="center_vertical"
+					android:textColor="@color/primary_color_red"
+					android:textSize="13sp"/>
+			</RelativeLayout>
+
+			<View style="@style/person_split_match"/>
+			<RelativeLayout
+				android:id="@+id/person_coupon"
+				android:layout_width="match_parent"
+				android:layout_height="44dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:drawableLeft="@drawable/person_coupon"
+					android:drawablePadding="13dp"
+					android:gravity="center_vertical"
+					android:text="@string/person_my_coupon"
+					android:textColor="@color/primary_color"
+					android:textSize="16sp"/>
+
+				<TextView
+					android:id="@+id/person_coupon_more"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:drawablePadding="10dp"
+					android:drawableRight="@drawable/hujia_more"
+					android:gravity="center_vertical"
+					android:textColor="@color/primary_color_red"
+					android:textSize="13sp"/>
+			</RelativeLayout>
+
+			<View style="@style/person_split_match"/>
+			<RelativeLayout
+				android:id="@+id/person_address"
+				android:layout_width="match_parent"
+				android:layout_height="44dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:drawableLeft="@drawable/person_address_manager"
+					android:drawablePadding="13dp"
+					android:gravity="center_vertical"
+					android:text="@string/person_address_manager"
+					android:textColor="@color/primary_color"
+					android:textSize="16sp"/>
+
+				<TextView
+					android:id="@+id/person_address_more"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:drawablePadding="10dp"
+					android:drawableRight="@drawable/hujia_more"
+					android:gravity="center_vertical"
+					android:textColor="@color/primary_color_red"
+					android:textSize="13sp"/>
+			</RelativeLayout>
+
+			<View style="@style/person_split_match"/>
+			<RelativeLayout
+				android:id="@+id/person_about_us"
+				android:layout_width="match_parent"
+				android:layout_height="44dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:drawableLeft="@drawable/person_about_us"
+					android:drawablePadding="13dp"
+					android:gravity="center_vertical"
+					android:text="@string/person_about_us"
+					android:textColor="@color/primary_color"
+					android:textSize="16sp"/>
+
+				<TextView
+					android:id="@+id/person_about_us_more"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:drawablePadding="10dp"
+					android:drawableRight="@drawable/hujia_more"
+					android:gravity="center_vertical"
+					android:textColor="@color/primary_color_red"
+					android:textSize="13sp"/>
+			</RelativeLayout>
+
+			<View style="@style/person_split_match"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/person_layout1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:divider="@drawable/vertical_splitline"
+			android:dividerPadding="1px"
+			android:orientation="horizontal"
+			android:showDividers="middle"
+			android:visibility="gone">
+
+			<TextView
+				android:id="@+id/person_frag_address_manager"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_address_manager"
+				android:text="地址管理"/>
+
+			<TextView
+				android:id="@+id/person_frag_coupon"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_coupon"
+				android:text="我的优惠券"/>
+
+			<TextView
+				android:id="@+id/person_frag_collection"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_collection"
+				android:text="我的收藏"/>
+
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/person_layout2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:divider="@drawable/vertical_splitline"
+			android:dividerPadding="1px"
+			android:orientation="horizontal"
+			android:showDividers="middle"
+			android:visibility="gone">
+
+			<TextView
+				android:id="@+id/person_frag_password_set"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_password_setting"
+				android:text="支付密码设置"/>
+
+			<TextView
+				android:id="@+id/person_frag_about_us"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_about_us"
+				android:text="关于我们"/>
+
+			<TextView
+				android:id="@+id/person_frag_null"
+				style="@style/personItemStyle"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/person_layout3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:divider="@drawable/vertical_splitline"
+			android:dividerPadding="1px"
+			android:orientation="horizontal"
+			android:showDividers="middle"
+			android:visibility="gone">
+
+			<TextView
+				android:id="@+id/person_frag_shopping"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_shopping_car"
+				android:text="我的购物车"/>
+
+			<TextView
+				android:id="@+id/person_frag_downline_pay"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_downline_pay"
+				android:text="线下支付"/>
+
+			<TextView
+				android:id="@+id/person_frag_vip_card"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_vip_card"
+				android:text="我的贵宾卡"/>
+
+			<TextView
+				android:id="@+id/person_frag_integral"
+				style="@style/personItemStyle"
+				android:drawableTop="@drawable/person_integral"
+				android:text="我的积分"/>
+
+		</LinearLayout>
+
+		<View
+			style="@style/person_split_match"
+			android:layout_marginBottom="10dp"/>
+	</LinearLayout>
+</ScrollView>
+

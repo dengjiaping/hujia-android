@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_color"
+              android:orientation="vertical">
+
+	<View style="@style/person_split_margin_top"/>
+
+	<LinearLayout
+		android:id="@+id/shopcar_store_layout"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:orientation="horizontal"
+		android:background="@color/white">
+
+		<CheckBox
+			android:id="@+id/shopcar_store_checked"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:button="@drawable/person_shopcar_select_all"/>
+
+		<TextView
+			android:id="@+id/shopcar_store_name"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:drawableLeft="@drawable/person_order_store"
+			android:drawablePadding="10dp"
+			android:drawableRight="@drawable/hujia_more"
+			android:gravity="center_vertical"
+			android:text="九牧王男装品牌旗舰店"
+			android:textColor="@color/primary_color"
+			android:textSize="12sp"/>
+	</LinearLayout>
+
+</LinearLayout>

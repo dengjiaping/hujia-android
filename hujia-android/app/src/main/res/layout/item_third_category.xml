@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tv_third_category"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:paddingEnd="5dp"
+          android:paddingStart="5dp"
+          android:background="@drawable/category_name_bg"
+          android:gravity="center"
+          android:minHeight="37dp"
+          android:textColor="@color/main_channel_textcolor"
+          android:textSize="14sp"/>

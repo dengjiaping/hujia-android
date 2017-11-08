@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="15dp"
+		android:paddingTop="15dp">
+
+		<include layout="@layout/person_order_cloth_detail"/>
+	</LinearLayout>
+
+	<View
+		android:id="@+id/apply_line"
+		style="@style/person_split_match"
+		android:layout_marginBottom="15dp"
+		android:layout_marginTop="15dp"/>
+</LinearLayout>

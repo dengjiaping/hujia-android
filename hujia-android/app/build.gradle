@@ -1,0 +1,190 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+	compileSdkVersion rootProject.ext.compileSdkVersion
+	buildToolsVersion rootProject.ext.buildToolsVersion
+
+	dexOptions {
+		//打包或者编译时出现GC overhead limit exceeded时加上这些
+		incremental true
+		javaMaxHeapSize "4g"
+	}
+
+	compileOptions {
+		targetCompatibility 1.8
+		sourceCompatibility 1.8
+	}
+
+	defaultConfig {
+		applicationId "com.ihujia.hujia"
+		minSdkVersion rootProject.ext.minSdkVersion
+		targetSdkVersion rootProject.ext.targetSdkVersion
+		versionCode rootProject.ext.versionCode
+		versionName rootProject.ext.versionName
+		multiDexEnabled true
+		ndk {
+			//选择要添加的对应cpu类型的.so库,还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+			abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+		}
+		//应用版本是versionName，开发时Bugly上显示的有_dev的后缀
+		manifestPlaceholders = [
+				JPUSH_PKGNAME : applicationId,
+				JPUSH_APPKEY : "138727d1a6bc28a53e7f6ad3", //JPush上注册的包名对应的appkey.
+//				JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+				APP_VERSION_NAME: versionName
+		]
+	}
+
+	signingConfigs {
+		release {
+			storeFile file("keystore.jks")
+			storePassword "hujia888"
+			keyAlias "hujia"
+			keyPassword "hujia888"
+		}
+	}
+
+	buildTypes {
+		release {
+			//签名
+			signingConfig signingConfigs.release
+			zipAlignEnabled true
+			//是否混淆
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+
+	sourceSets {
+		main {
+			jniLibs.srcDirs = ['libs']
+		}
+	}
+
+	productFlavors {
+		"VPLUS" {} //v+官网
+		"VPLUSWX" {} //v+微信公众号
+
+		"BAIDU" {} // 百度搜索
+		"SOUGOU" {} //搜狗搜索
+		"SEM360" {} //360搜索
+		"SHENMA" {} //神马搜索
+
+		"XIAOMI" {} //小米应用商店
+		"HUAWEI" {} //华为
+		"OPPO" {} //oppo
+		"VIVO" {} //vivo
+		"MEIZU" {} //魅族
+		"LENOVO" {} //联想
+		"LESHI" {} //乐视
+		"GIONEE" {} //金立
+		"COOLPAD" {} //酷派
+		"DOOV" {} //朵唯
+		"KTOUCH" {} //天语
+
+		"YYB"{} //应用宝
+		"DEVBAIDU"{} //百度应用商店
+		"DEV360" {}  //360应用商店
+		"DEVSOUGOU" {} //搜狗
+		"ALI" {} //阿里分发
+		"YYH" {} //应用汇
+		"YOUYI" {} //优亿市场
+		"MUMAYI" {} //木蚂蚁
+		"GOOGLEPLAY" {} //Google Play
+		"ANZHI" {} //安智
+		"JIFENG" {} //机锋
+
+		"YDMM" {} //移动mm
+		"WOSTORE" {} //联通沃
+		"TIANYI" {} //电信天翼
+
+		"GDT1" {} //广点通1
+		"GDT2" {} //广点通2
+		"GDT3" {} //广点通3
+		"GDT4" {} //广点通4
+		"GDT5" {} //广点通5
+		"GDT6" {} //广点通6
+		"GDT7" {} //广点通7
+		"GDT8" {} //广点通8
+		"GDT9" {} //广点通9
+		"GDT10" {} //广点通10
+		"ZHT1" {} //智慧推1
+		"ZHT2" {} //智慧推2
+		"ZHT3" {} //智慧推3
+		"ZHT4" {} //智慧推4
+		"ZHT5" {} //智慧推5
+		"JRTT1" {} //今日头条1
+		"JRTT2" {} //今日头条2
+		"JRTT3" {} //今日头条3
+		"JRTT4" {} //今日头条4
+		"JRTT5" {} //今日头条5
+		"JRTT6" {} //今日头条6
+		"JRTT7" {} //今日头条7
+		"JRTT8" {} //今日头条8
+		"JRTT9" {} //今日头条9
+		"JRTT10" {} //今日头条10
+		"UCTT1" {} //UC头条1
+		"UCTT2" {} //UC头条2
+		"UCTT3" {} //UC头条3
+		"UCTT4" {} //UC头条4
+		"UCTT5" {} //UC头条5
+		"BDTB1" {} //百度贴吧1
+		"BDTB2" {} //百度贴吧2
+		"BDTB3" {} //百度贴吧3
+		"BDTB4" {} //百度贴吧4
+		"BDTB5" {} //百度贴吧5
+		"SHHS1" {} //搜狐汇算1
+		"SHHS2" {} //搜狐汇算2
+		"SHHS3" {} //搜狐汇算3
+		"SHHS4" {} //搜狐汇算4
+		"SHHS5" {} //搜狐汇算5
+		"SINAFY1" {} //新浪扶翼1
+		"SINAFY2" {} //新浪扶翼2
+		"SINAFY3" {} //新浪扶翼3
+		"SINAFY4" {} //新浪扶翼4
+		"SINAFY5" {} //新浪扶翼5
+		"FST1" {} //粉丝通1
+		"FST2" {} //粉丝通2
+		"FST3" {} //粉丝通3
+		"FST4" {} //粉丝通4
+		"FST5" {} //粉丝通5
+	}
+
+	productFlavors.all {
+		flavor -> flavor.manifestPlaceholders = [CHANNEL_NAME: name,JPUSH_CHANNEL : name]
+	}
+	// rename apk
+	applicationVariants.all { variant ->
+		variant.outputs.each { output ->
+			def outputFile = output.outputFile
+			if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//				def fileName = outputFile.name
+                def fileName = outputFile.name.replace(".apk","-${defaultConfig.versionName}.apk")
+
+				output.outputFile = new File(outputFile.parent, fileName)
+			}
+		}
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	compile project(':commonlib')
+	compile project(':custormpulltorefresh')
+	compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
+	compile "com.android.support:cardview-v7:$rootProject.supportVersion"
+	compile "com.android.support:support-v4:$rootProject.supportVersion"
+	compile "com.android.support:design:$rootProject.supportVersion"
+	//zxing
+	compile 'com.google.zxing:core:latest.release'
+	//首页轮播图
+	compile 'com.youth.banner:banner:latest.release'
+	//bug反馈
+	compile 'com.tencent.bugly:crashreport:latest.release'
+	//极光推送
+	compile 'cn.jiguang.sdk:jpush:3.0.0'
+	compile 'cn.jiguang.sdk:jcore:1.0.0'
+	//多dex支持
+	compile 'com.android.support:multidex:1.0.1'
+}

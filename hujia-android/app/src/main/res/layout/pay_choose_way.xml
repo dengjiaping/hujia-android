@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_select_pay_type"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="49dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:text="请选择支付方式"
+		android:textColor="@color/primary_color"
+		android:textSize="@dimen/font_size_a"/>
+
+	<View style="@style/person_split_match"/>
+
+	<include
+		android:id="@+id/pay_way_zhifubao"
+		layout="@layout/pay_way_item"/>
+
+	<View style="@style/person_split_match"/>
+
+	<include
+		android:id="@+id/pay_way_weixin"
+		layout="@layout/pay_way_item"/>
+</LinearLayout>

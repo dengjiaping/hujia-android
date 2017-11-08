@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<View style="@style/person_split_match"/>
+	<LinearLayout
+		android:id="@+id/confirm_order_store_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white">
+		<TextView
+			android:id="@+id/confirm_order_store_name"
+			android:layout_width="wrap_content"
+			android:layout_height="44dp"
+			android:background="@color/white"
+			android:drawableStart="@drawable/person_order_store"
+			android:drawableEnd="@drawable/hujia_more"
+			android:drawablePadding="10dp"
+			android:gravity="center_vertical"
+			android:paddingStart="12dp"
+			android:paddingEnd="12dp"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+	</LinearLayout>
+
+	<View style="@style/person_split_match"/>
+
+	<com.common.view.ListViewForInner
+		android:id="@+id/confirm_order_list"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:dividerHeight="1px"
+		android:divider="@color/common_bg_color"/>
+
+	<View style="@style/person_split_match"/>
+
+	<include
+		android:id="@+id/confirm_order_freight"
+		layout="@layout/confirm_order_item_bottom"/>
+
+	<View style="@style/person_split_match"/>
+</LinearLayout>

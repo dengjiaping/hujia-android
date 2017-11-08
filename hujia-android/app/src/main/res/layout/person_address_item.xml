@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+	<View style="@style/person_split_match"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:orientation="horizontal"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:id="@+id/address_item_username"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="孫源欣"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/address_item_phone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:text="13002132563"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/address_item_address"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="18dp"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:text="北京市北京东城区安定门外大街185号京宝大厦304"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="14sp"/>
+
+	<View
+		style="@style/person_split_left_right"
+		android:layout_marginTop="20dp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:id="@+id/address_item_default"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:drawableLeft="@drawable/list_check_normal"
+			android:drawablePadding="5dp"
+			android:text="设为默认地址"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/address_item_edit"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:drawableLeft="@drawable/list_edit_icon"
+			android:drawablePadding="5dp"
+			android:text="编辑"
+			android:gravity="center"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/address_item_delete"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="35dp"
+			android:drawableLeft="@drawable/list_delete_icon"
+			android:drawablePadding="5dp"
+			android:gravity="center"
+			android:text="删除"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+	</LinearLayout>
+
+	<View style="@style/person_split_match"/>
+
+	<View
+		android:id="@+id/address_item_divider"
+		android:layout_width="match_parent"
+		android:layout_height="10dp"
+		android:background="@color/common_bg_color"/>
+</LinearLayout>

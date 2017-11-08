@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_color"
+              android:orientation="vertical">
+
+	<include layout="@layout/home_search_title"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="33dp"
+		android:paddingStart="15dp"
+		android:paddingEnd="0dp"
+		android:gravity="center_vertical"
+		android:text="@string/search_hot"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="14sp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingBottom="15dp"
+		android:paddingStart="0dp"
+		android:paddingEnd="12dp">
+
+		<com.ihujia.hujia.person.flowlayout.FlowTagLayout
+			android:id="@+id/search_hot_search"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:paddingEnd="0dp"
+			android:paddingStart="2dp"/>
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="33dp"
+		android:paddingStart="15dp"
+		android:paddingEnd="0dp"
+		android:gravity="center_vertical"
+		android:text="@string/search_history"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="14sp"/>
+
+	<ListView
+		android:id="@+id/search_history"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:divider="@null"
+		android:background="@color/white"/>
+
+	<LinearLayout
+		android:id="@+id/search_clean_history"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:visibility="gone"
+		android:gravity="center">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/history_delete_icon"
+			android:drawablePadding="5dp"
+			android:gravity="center"
+			android:text="@string/search_clear_history"
+			android:textColor="@color/home_more_textcolor"/>
+	</LinearLayout>
+</LinearLayout>

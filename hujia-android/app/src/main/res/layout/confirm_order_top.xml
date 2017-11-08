@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_color"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/confirm_userinfo_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingBottom="20dp"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:paddingTop="20dp">
+
+		<TextView
+			android:id="@+id/confirm_username"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/confirm_userphone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/confirm_username"
+			android:layout_marginTop="12dp"
+			android:hint="@string/input_address"
+			android:textColorHint="@color/person_check_order_textcolor"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/confirm_address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/confirm_userphone"
+			android:layout_marginTop="12dp"
+			android:textColor="@color/primary_color"
+			android:textSize="12sp"/>
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/hujia_more"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_match"/>
+</LinearLayout>

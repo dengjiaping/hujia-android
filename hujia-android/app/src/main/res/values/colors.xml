@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--二维码-->
+	<color name="transparent">#00000000</color>
+	<color name="viewfinder_mask">#60000000</color>
+	<color name="border_gray">#e0e0e0</color>
+	<color name="distance_spinner_bg">#E5E5E5</color>
+	<color name="distance_spinner_right_bg">#F3F3F3</color>
+	<color name="spinner_list_item_selector">#028be6</color>
+	<!--dialogplus-->
+	<color name="black_overlay">#60000000</color>
+
+	<color name="colorPrimary">#3F51B5</color>
+	<color name="colorPrimaryDark">#303F9F</color>
+	<color name="colorAccent">#FF4081</color>
+
+	<color name="common_bg">#f4f9fa</color>
+	<color name="spilt_line">#e6e7e8</color>
+	<color name="title_bg">#31b0ef</color>
+	<color name="hint_words">#c7c7cc</color>
+	<color name="dark_grey">#2f333b</color>
+	<color name="primary_visual_blue">#31b0ef</color>
+	<color name="middle_gray">#333333</color>
+	<color name="btn_gray">#84878d</color>
+	<color name="opaque_black">#ff000000</color>
+	<color name="half_transparent_black">#4d000000</color>
+	<color name="half_transparent_white">#b3ffffff</color>
+	
+	<!--主色调-->
+	<color name="primary_color">#212121</color>
+	<color name="primary_color_red">#d41439</color>
+	<!--背景色-->
+	<color name="common_bg_color">#f8f8f8</color>
+	<!--分割线颜色-->
+	<color name="common_spilt_line">#f2f2f2</color>
+	<!--底部bar背景颜色-->
+	<color name="bar_bg_color">#f9f9f9</color>
+	<!--底部bar上部分隔颜色-->
+	<color name="tab_textcolor_normal">#4b4b4b</color>
+	<color name="bar_spilt_line">#d1d1d1</color>
+	<color name="home_more_textcolor">#cccccc</color>
+	<color name="person_check_order_textcolor">#999999</color>
+	<color name="person_qrcode_refresh_bg">#f0f0f0</color>
+	<color name="person_shopcar_split_line">#dbdfe2</color>
+
+	<color name="num_minu_add_color">#808080</color>
+	<color name="main_brand_textcolor">#2f333b</color>
+	<color name="main_channel_textcolor">#666666</color>
+	<color name="cover_text_bg">#3c3c3c3c</color>
+	<color name="brand_head_bg">#1b1b1b</color>
+	<color name="ic_button_text_unenable">#cecece</color>
+	<color name="coupon_add_button_text">#0066ff</color>
+	<color name="hint_text_color">#bbbbbb</color>
+	<color name="sub_text_color">#fcb0b1</color>
+	<color name="foreground_overlay">#99000000</color>
+	<color name="translucent_common_bg_color">#99f8f8f8</color>
+	<color name="brand_gradient_start">#f11c61</color>
+	<color name="brand_gradient_end">#fb551b</color>
+	<color name="store_renovation_type_red">#d31838</color>
+</resources>

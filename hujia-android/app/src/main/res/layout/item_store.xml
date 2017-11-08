@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/fl_store_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/sdv_store_img"
+		android:layout_width="match_parent"
+		android:layout_height="170dp"
+		fresco:actualImageScaleType="fitCenter"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:layout_gravity="bottom"
+		android:background="@drawable/translucent_gradient_bg">
+
+		<LinearLayout
+			android:id="@+id/ll_store_bottom"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:paddingBottom="9dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp">
+
+			<TextView
+				android:id="@+id/tv_store_address"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ellipsize="end"
+				android:maxLines="1"
+				android:textColor="@color/white"
+				android:textSize="12sp"/>
+
+			<TextView
+				android:id="@+id/tv_store_distance"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/white"
+				android:textSize="12sp"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/tv_store_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/ll_store_bottom"
+			android:paddingBottom="7dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:textColor="@color/white"
+			android:textSize="15sp"/>
+	</RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/coupon_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/coupon_useable_bg"
+                android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/coupon_item_value"
+		android:layout_width="120dp"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:textColor="@color/primary_color"
+		android:textSize="45sp"/>
+
+	<TextView
+		android:id="@+id/coupon_item_requirements"
+		android:layout_width="120dp"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/coupon_item_value"
+		android:gravity="center"
+		android:maxLines="1"
+		android:ellipsize="end"
+		android:textColor="@color/primary_color"
+		android:textSize="12sp"/>
+
+	<View
+		android:id="@+id/coupon_item_split"
+		android:layout_width="1px"
+		android:layout_height="67dp"
+		android:layout_centerVertical="true"
+		android:layout_toEndOf="@+id/coupon_item_value"
+		android:background="@color/home_more_textcolor"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginStart="15dp"
+		android:layout_toEndOf="@id/coupon_item_split"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/coupon_item_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="16dp"
+			android:textColor="@color/primary_color"
+			android:textSize="16sp"/>
+
+		<TextView
+			android:id="@+id/coupon_item_validity"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="12dp"
+			android:textColor="@color/person_check_order_textcolor"
+			android:textSize="11sp"/>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/coupon_item_status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:src="@drawable/person_coupon_overdue"
+		android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+	<ImageView
+		android:id="@+id/service_success_img"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="65dp"
+		android:src="@drawable/apply_success_img"/>
+
+	<TextView
+		android:id="@+id/service_success_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/service_success_img"
+		android:layout_marginTop="30dp"
+		android:gravity="center"
+		android:textColor="@color/primary_color"
+		android:textSize="15sp"/>
+
+	<TextView
+		android:id="@+id/service_success_text_describe"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/service_success_text"
+		android:layout_marginTop="10dp"
+		android:gravity="center"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="12sp"/>
+
+	<TextView
+		android:id="@+id/service_success_close"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="15dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:background="@drawable/ic_button"
+		android:gravity="center"
+		android:text="@string/refund_see_progress"
+		android:textColor="@drawable/ic_button_text"/>
+</RelativeLayout>

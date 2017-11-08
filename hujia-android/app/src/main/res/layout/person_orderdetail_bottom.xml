@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/common_bg_color"
+	android:orientation="vertical">
+
+	<View style="@style/person_split_match"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:id="@+id/order_detail_goods_price1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:text="商品金额"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_price"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="15dp"
+			android:text="￥1626.00"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_coupon1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/order_detail_goods_price1"
+			android:layout_marginTop="15dp"
+			android:text="优惠券"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_coupon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/order_detail_goods_price"
+			android:layout_marginTop="15dp"
+			android:text="￥1626.00"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_freight1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/order_detail_goods_coupon1"
+			android:layout_marginTop="15dp"
+			android:text="运费"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_freight"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/order_detail_goods_coupon"
+			android:layout_marginTop="15dp"
+			android:text="￥1626.00"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_re1pay1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/order_detail_goods_freight1"
+			android:layout_marginTop="15dp"
+			android:text="实付款"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_goods_re1pay"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/order_detail_goods_freight"
+			android:layout_marginTop="15dp"
+			android:text="￥1626.00"
+			android:textColor="@color/primary_color"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:id="@+id/order_detail_time"
+			android:layout_width="wrap_content"
+			android:layout_height="38dp"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/order_detail_goods_re1pay"
+			android:gravity="center_vertical"
+			android:text="下单时间：2016-12-20 20:15:56 "
+			android:textColor="@color/person_check_order_textcolor"
+			android:textSize="12sp"/>
+	</RelativeLayout>
+</LinearLayout>

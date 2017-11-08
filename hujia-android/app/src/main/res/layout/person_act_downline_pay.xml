@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginTop="42dp"
+		android:background="@drawable/person_vipcard_bg">
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/downline_pay_bar_code"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="83dp"
+			android:layout_marginTop="30dp"/>
+
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/downline_pay_qr_code"
+			android:layout_width="168dp"
+			android:layout_height="168dp"
+			android:layout_marginTop="34dp"
+			android:layout_below="@+id/downline_pay_bar_code"
+			android:layout_centerHorizontal="true"/>
+
+		<RelativeLayout
+			android:id="@+id/downline_pay_refresh_code"
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:layout_marginTop="35dp"
+			android:layout_below="@+id/downline_pay_qr_code"
+			android:background="@drawable/downline_pay_refresh_bg"
+			android:gravity="center">
+
+			<ImageView
+				android:id="@+id/home_search_img"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:src="@drawable/ic_drawable_search"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@id/home_search_img"
+				android:paddingLeft="5dp"
+				android:text="刷新付款码"
+				android:textColor="@color/primary_color"
+				android:textSize="14sp"/>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

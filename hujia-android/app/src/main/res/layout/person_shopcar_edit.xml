@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+	<com.facebook.drawee.view.SimpleDraweeView
+		android:id="@+id/shopcar_item_edit_img"
+		android:layout_width="108dp"
+		android:layout_height="108dp"
+		android:background="@drawable/person_order_cloth_bg"
+		fresco:actualImageScaleType="fitCenter"
+		fresco:failureImage="@drawable/default_product_bg"
+		fresco:placeholderImage="@drawable/default_product_bg"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingLeft="15dp"
+		android:paddingRight="15dp">
+
+		<com.ihujia.hujia.widget.AddMinuLayout
+			android:id="@+id/shopcar_item_num_change"
+			android:layout_width="match_parent"
+			android:layout_height="30dp"/>
+
+		<RelativeLayout
+			android:id="@+id/shopcar_item_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/shopcar_item_num_change"
+			android:layout_marginTop="30dp">
+
+			<TextView
+				android:id="@+id/shopcar_item_edit_color"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingRight="20dp"
+				android:text="颜色分类:棕色"
+				android:textColor="@color/primary_color"
+				android:textSize="12sp"/>
+
+			<TextView
+				android:id="@+id/shopcar_item_edit_size"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/shopcar_item_edit_color"
+				android:layout_marginTop="8dp"
+				android:paddingRight="20dp"
+				android:text="尺寸：180/M"
+				android:textColor="@color/primary_color"
+				android:textSize="12sp"/>
+
+			<ImageView
+				android:id="@+id/shopcar_item_edit_fix"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:paddingLeft="20dp"
+				android:src="@drawable/shopcar_edit_img"/>
+		</RelativeLayout>
+
+	</RelativeLayout>
+</LinearLayout>

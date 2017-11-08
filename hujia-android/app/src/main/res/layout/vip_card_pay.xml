@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/person_vipcard_bg"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="52dp">
+
+		<ImageView
+			android:id="@+id/vippay_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="16dp"
+			android:src="@drawable/dialog_left_ic_close"/>
+
+		<TextView
+			android:id="@+id/vippay_title"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:text="请输入支付密码"
+			android:textColor="@color/primary_color"
+			android:textSize="17sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_match"/>
+
+	<TextView
+		android:id="@+id/vippay_product_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:gravity="center"
+		android:text="杰克斯顿2016新款男士外套"
+		android:textColor="@color/primary_color"
+		android:textSize="13sp"/>
+
+	<TextView
+		android:id="@+id/vippay_product_price"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:gravity="center"
+		android:text="￥35623.00"
+		android:textColor="@color/primary_color_red"
+		android:textSize="32sp"/>
+
+	<View style="@style/person_split_left_right"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="42dp"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:drawableLeft="@drawable/person_vip_card"
+			android:drawablePadding="12dp"
+			android:gravity="center_vertical"
+			android:textColor="@color/primary_color"
+			android:textSize="16sp"/>
+
+		<TextView
+			android:id="@+id/vippay_not_enouth"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:drawableLeft="@drawable/person_about_us"
+			android:drawablePadding="5dp"
+			android:gravity="center_vertical"
+			android:text="余额不足"
+			android:textColor="@color/primary_color_red"
+			android:textSize="12sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_left_right"/>
+
+	<TextView
+		android:id="@+id/vippay_balance"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:textColor="@color/primary_color"
+		android:textSize="14sp"/>
+
+	<com.ihujia.hujia.widget.PasswordInputView
+		android:id="@+id/vippay_password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginTop="12dp"/>
+
+	<TextView
+		android:id="@+id/vippay_charge"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginTop="12dp"
+		android:background="@drawable/ic_button"
+		android:gravity="center"
+		android:text="立即充值"
+		android:textColor="@color/white"
+		android:textSize="15sp"/>
+
+	<TextView
+		android:id="@+id/vippay_cancel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:layout_marginTop="16dp"
+		android:gravity="center"
+		android:text="@string/cancel"
+		android:textColor="@color/primary_color_red"
+		android:textSize="12sp"/>
+</LinearLayout>

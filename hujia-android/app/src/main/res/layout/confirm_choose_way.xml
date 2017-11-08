@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:background="@color/white"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:text="@string/pay_order_amount"
+			android:textColor="@color/primary_color"
+			android:textSize="14sp"/>
+
+		<TextView
+			android:id="@+id/choose_payway_order_total"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:textColor="@color/primary_color_red"
+			android:textSize="14sp"/>
+	</RelativeLayout>
+
+	<View style="@style/person_split_match"/>
+
+	<View style="@style/person_split_margin_top"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingStart="12dp"
+		android:paddingEnd="0dp"
+		android:text="@string/pay_select_pay_channel"
+		android:textColor="@color/primary_color"
+		android:textSize="14sp"/>
+
+	<View style="@style/person_split_match"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<ListView
+			android:id="@+id/confirm_choose_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:divider="@null"
+			android:dividerHeight="1px"
+			android:scrollbars="none"/>
+
+		<View style="@style/person_split_match"/>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"/>
+
+	<TextView
+		android:id="@+id/confirm_choose_pay"
+		android:layout_width="match_parent"
+		android:layout_height="49dp"
+		android:layout_gravity="bottom"
+		android:background="@color/primary_color_red"
+		android:gravity="center"
+		android:text="@string/pay_now"
+		android:textColor="@color/white"
+		android:textSize="16sp"/>
+</LinearLayout>

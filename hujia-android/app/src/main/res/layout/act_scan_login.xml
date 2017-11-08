@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="90dp"
+		android:src="@drawable/scan_login_img"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="45dp"
+		android:gravity="center"
+		android:text="@string/login_scan_confirm"
+		android:textColor="@color/primary_color"
+		android:textSize="17sp"/>
+
+	<TextView
+		android:id="@+id/scan_login_confirm"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginLeft="23dp"
+		android:layout_marginRight="23dp"
+		android:layout_marginTop="164dp"
+		android:background="@drawable/ic_button"
+		android:gravity="center"
+		android:text="@string/login_confirm"
+		android:textColor="@color/white"
+		android:textSize="16sp"/>
+
+	<TextView
+		android:id="@+id/scan_login_cancel"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginLeft="23dp"
+		android:layout_marginRight="23dp"
+		android:layout_marginTop="20dp"
+		android:background="@drawable/ic_tran_button_unenable"
+		android:gravity="center"
+		android:text="@string/login_cancel"
+		android:textColor="@color/person_check_order_textcolor"
+		android:textSize="16sp"/>
+</LinearLayout>
